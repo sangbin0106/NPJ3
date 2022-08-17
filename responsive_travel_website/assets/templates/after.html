@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="static/img/favicon.png" type="image/png">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="static/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="static/css/styles.css">
+
+        <title>Responsive Website Travel</title>
+    </head>
+            <!--==================== PLACES ====================-->
+            <section class="place section" id="place">
+                
+                <h2 class="section__title">여행지를 골라주세요</h2>
+
+                <div class="place__container container grid">
+
+                    <!--==================== PLACES CARD 1====================-->
+                    <form method="POST", action="{{url_for('info')}}">
+                        <div class="place__card">
+                            <img src="static/img/place1.jpg" alt="" class="place__img">
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon; text-align:right;"></i>  
+                                    {% for i in data['rating'][0:1] %}
+                                    <span class="place__rating-number"><input value="{{i}}" color="#FFF" width="50"
+                                     style="border: none; background: transparent; color:rgb(255, 255, 255); font-size:var(--small-font-size); text-align:right; width:23px;"></span>
+                                    {% endfor %}
+                                </span>
+                                <div class="place__data">
+                                    {% for i in data['name'][0:1] %}
+                                    <h3 class="place__title"><input class="place_title" value="{{i}}"
+                                         style="border: none; background: transparent; color:rgb(255, 255, 255);"></h3>
+                                    {% endfor %}
+                                    <span class="place__subtitle">Jeju-do</span>
+                                </div>
+                            </div>
+                            {% for i in data['name'][0:1] %}
+                            <button class="button button--flex place__button", name="chk_info" value= {{i}} input type="submit">
+                            {% endfor %}
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                    </form>
+                    </div>
+
+                    <!--==================== PLACES CARD 2====================-->
+                    <form method="POST", action="{{url_for('info')}}">
+                        <div class="place__card">
+                            <img src="static/img/place1.jpg" alt="" class="place__img">
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon; text-align:right;"></i>  
+                                    {% for i in data['rating'][1:2] %}
+                                    <span class="place__rating-number"><input value="{{i}}" color="#FFF" width="50"
+                                     style="border: none; background: transparent; color:rgb(255, 255, 255); font-size:var(--small-font-size); text-align:right; width:23px;"></span>
+                                    {% endfor %}
+                                </span>
+                                <div class="place__data">
+                                    {% for i in data['name'][1:2] %}
+                                    <h3 class="place__title"><input class="place_title" value="{{i}}"
+                                         style="border: none; background: transparent; color:rgb(255, 255, 255);"></h3>
+                                    {% endfor %}
+                                    <span class="place__subtitle">Jeju-do</span>
+                                </div>
+                            </div>
+                            {% for i in data['name'][1:2] %}
+                            <button class="button button--flex place__button", name="chk_info" value= {{i}} input type="submit">
+                            {% endfor %}
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                    </form>
+                    </div>
+
+
+                    <!--==================== PLACES CARD 3====================-->
+                    <form method="POST", action="{{url_for('info')}}">
+                        <div class="place__card">
+                            <img src="static/img/place1.jpg" alt="" class="place__img">
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon; text-align:right;"></i>  
+                                    {% for i in data['rating'][2:3] %}
+                                    <span class="place__rating-number"><input value="{{i}}" color="#FFF" width="50"
+                                     style="border: none; background: transparent; color:rgb(255, 255, 255); font-size:var(--small-font-size); text-align:right; width:23px;"></span>
+                                    {% endfor %}
+                                </span>
+                                <div class="place__data">
+                                    {% for i in data['name'][2:3] %}
+                                    <h3 class="place__title"><input class="place_title" value="{{i}}"
+                                         style="border: none; background: transparent; color:rgb(255, 255, 255);"></h3>
+                                    {% endfor %}
+                                    <span class="place__subtitle">Jeju-do</span>
+                                </div>
+                            </div>
+                            {% for i in data['name'][2:3] %}
+                            <button class="button button--flex place__button", name="chk_info" value= {{i}} input type="submit">
+                            {% endfor %}
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                    </form>
+                    </div>
+
+
+                    <!--==================== PLACES CARD 4====================-->
+                    <form method="POST", action="{{url_for('info')}}">
+                        <div class="place__card">
+                            <img src="static/img/place2.jpg" alt="" class="place__img">
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon; text-align:right;"></i>  
+                                    {% for i in data['rating'][3:4] %}
+                                    <span class="place__rating-number"><input value="{{i}}" color="#FFF" width="50"
+                                     style="border: none; background: transparent; color:rgb(255, 255, 255); font-size:var(--small-font-size); text-align:right; width:23px;"></span>
+                                    {% endfor %}
+                                </span>
+                                <div class="place__data">
+                                    {% for i in data['name'][3:4] %}
+                                    <h3 class="place__title"><input class="place_title" value="{{i}}"
+                                         style="border: none; background: transparent; color:rgb(255, 255, 255);"></h3>
+                                    {% endfor %}
+                                    <span class="place__subtitle">Jeju-do</span>
+                                </div>
+                            </div>
+                            {% for i in data['name'][3:4] %}
+                            <button class="button button--flex place__button", name="chk_info" value= {{i}} input type="submit">
+                            {% endfor %}
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                    </form>
+                    </div>
+
+
+                    <!--==================== PLACES CARD 5====================-->
+                    <form method="POST", action="{{url_for('info')}}">
+                        <div class="place__card">
+                            <img src="static/img/place2.jpg" alt="" class="place__img">
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon; text-align:right;"></i>  
+                                    {% for i in data['rating'][4:5] %}
+                                    <span class="place__rating-number"><input value="{{i}}" color="#FFF" width="50"
+                                     style="border: none; background: transparent; color:rgb(255, 255, 255); font-size:var(--small-font-size); text-align:right; width:23px;"></span>
+                                    {% endfor %}
+                                </span>
+                                <div class="place__data">
+                                    {% for i in data['name'][4:5] %}
+                                    <h3 class="place__title"><input class="place_title" value="{{i}}"
+                                         style="border: none; background: transparent; color:rgb(255, 255, 255);"></h3>
+                                    {% endfor %}
+                                    <span class="place__subtitle">Jeju-do</span>
+                                </div>
+                            </div>
+                            {% for i in data['name'][4:5] %}
+                            <button class="button button--flex place__button", name="chk_info" value= {{i}} input type="submit">
+                            {% endfor %}
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                    </form>
+                    </div>
+                    <!--==================== PLACES CARD 6====================-->
+                    <form method="POST", action="{{url_for('info')}}">
+                        <div class="place__card">
+                            <img src="static/img/place2.jpg" alt="" class="place__img">
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon; text-align:right;"></i>  
+                                    {% for i in data['rating'][5:6] %}
+                                    <span class="place__rating-number"><input value="{{i}}" color="#FFF" width="50"
+                                     style="border: none; background: transparent; color:rgb(255, 255, 255); font-size:var(--small-font-size); text-align:right; width:23px;"></span>
+                                    {% endfor %}
+                                </span>
+                                <div class="place__data">
+                                    {% for i in data['name'][5:6] %}
+                                    <h3 class="place__title"><input class="place_title" value="{{i}}"
+                                         style="border: none; background: transparent; color:rgb(255, 255, 255);"></h3>
+                                    {% endfor %}
+                                    <span class="place__subtitle">Jeju-do</span>
+                                </div>
+                            </div>
+                            {% for i in data['name'][5:6] %}
+                            <button class="button button--flex place__button", name="chk_info" value= {{i}} input type="submit">
+                            {% endfor %}
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                    </form>
+                    </div>
+                    <!--==================== PLACES CARD 7====================-->
+                    <form method="POST", action="{{url_for('info')}}">
+                        <div class="place__card">
+                            <img src="static/img/place3.jpg" alt="" class="place__img">
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon; text-align:right;"></i>  
+                                    {% for i in data['rating'][6:7] %}
+                                    <span class="place__rating-number"><input value="{{i}}" color="#FFF" width="50"
+                                     style="border: none; background: transparent; color:rgb(255, 255, 255); font-size:var(--small-font-size); text-align:right; width:23px;"></span>
+                                    {% endfor %}
+                                </span>
+                                <div class="place__data">
+                                    {% for i in data['name'][6:7] %}
+                                    <h3 class="place__title"><input class="place_title" value="{{i}}"
+                                         style="border: none; background: transparent; color:rgb(255, 255, 255);"></h3>
+                                    {% endfor %}
+                                    <span class="place__subtitle">Jeju-do</span>
+                                </div>
+                            </div>
+                            {% for i in data['name'][6:7] %}
+                            <button class="button button--flex place__button", name="chk_info" value= {{i}} input type="submit">
+                            {% endfor %}
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                    </form>
+                    </div>
+                    <!--==================== PLACES CARD 8====================-->
+                    <form method="POST", action="{{url_for('info')}}">
+                        <div class="place__card">
+                            <img src="static/img/place3.jpg" alt="" class="place__img">
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon; text-align:right;"></i>  
+                                    {% for i in data['rating'][7:8] %}
+                                    <span class="place__rating-number"><input value="{{i}}" color="#FFF" width="50"
+                                     style="border: none; background: transparent; color:rgb(255, 255, 255); font-size:var(--small-font-size); text-align:right; width:23px;"></span>
+                                    {% endfor %}
+                                </span>
+                                <div class="place__data">
+                                    {% for i in data['name'][7:8] %}
+                                    <h3 class="place__title"><input class="place_title" value="{{i}}"
+                                         style="border: none; background: transparent; color:rgb(255, 255, 255);"></h3>
+                                    {% endfor %}
+                                    <span class="place__subtitle">Jeju-do</span>
+                                </div>
+                            </div>
+                            {% for i in data['name'][7:8] %}
+                            <button class="button button--flex place__button", name="chk_info" value= {{i}} input type="submit">
+                            {% endfor %}
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                    </form>
+                    </div>
+                    <!--==================== PLACES CARD 9====================-->
+                    <form method="POST", action="{{url_for('info')}}">
+                        <div class="place__card">
+                            <img src="static/img/place3.jpg" alt="" class="place__img">
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon; text-align:right;"></i>  
+                                    {% for i in data['rating'][8:9] %}
+                                    <span class="place__rating-number"><input value="{{i}}" color="#FFF" width="50"
+                                     style="border: none; background: transparent; color:rgb(255, 255, 255); font-size:var(--small-font-size); text-align:right; width:23px;"></span>
+                                    {% endfor %}
+                                </span>
+                                <div class="place__data">
+                                    {% for i in data['name'][8:9] %}
+                                    <h3 class="place__title"><input class="place_title" value="{{i}}"
+                                         style="border: none; background: transparent; color:rgb(255, 255, 255);"></h3>
+                                    {% endfor %}
+                                    <span class="place__subtitle">Jeju-do</span>
+                                </div>
+                            </div>
+                            {% for i in data['name'][8:9] %}
+                            <button class="button button--flex place__button", name="chk_info" value= {{i}} input type="submit">
+                            {% endfor %}
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                    </form>
+                    </div>
+                    <!--==================== PLACES CARD 10====================-->
+                    <form method="POST", action="{{url_for('info')}}">
+                        <div class="place__card">
+                            <img src="static/img/place4.jpg" alt="" class="place__img">
+                            <div class="place__content">
+                                <span class="place__rating">
+                                    <i class="ri-star-line place__rating-icon; text-align:right;"></i>  
+                                    {% for i in data['rating'][9:10] %}
+                                    <span class="place__rating-number"><input value="{{i}}" color="#FFF" width="50"
+                                     style="border: none; background: transparent; color:rgb(255, 255, 255); font-size:var(--small-font-size); text-align:right; width:23px;"></span>
+                                    {% endfor %}
+                                </span>
+                                <div class="place__data">
+                                    {% for i in data['name'][9:10] %}
+                                    <h3 class="place__title"><input class="place_title" value="{{i}}"
+                                         style="border: none; background: transparent; color:rgb(255, 255, 255);"></h3>
+                                    {% endfor %}
+                                    <span class="place__subtitle">Jeju-do</span>
+                                </div>
+                            </div>
+                            {% for i in data['name'][9:10] %}
+                            <button class="button button--flex place__button", name="chk_info" value= {{i}} input type="submit">
+                            {% endfor %}
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                    </form>
+                    </div>
+                </div>
+
+            </section>
+
+</body>
+
+</html>

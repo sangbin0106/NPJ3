@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="static/img/favicon.png" type="image/png">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="static/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="static/css/styles.css">
+
+        <title>Responsive Website Travel</title>
+    </head>
+    <body>
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="home_data_title">Travel</a>
+
+                    <i class="ri-close-line nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <img src="static/img/home1.jpg" alt="" class="home__img">
+
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <span class="home__data-subtitle">제주 여행의 시작</span>
+                        <h1 class="home__data-title"><b>테마</b>에 맞는 <br>  <b>최고의 여행지</b>로 <br> 떠나보세요</h1>
+                            <form type="button" method="POST", action="{{url_for('home')}}">
+                                <select type="button" aria-haspopup="listbox" aria-label="한국어: 한국어(419)"
+                                aria-expanded="true" style="border-color:rgb(0, 0, 0); border-width:2px; cursor:pointer; box-shadow:none; border-style:solid; 
+                                text-overflow: ellipsis; box-sizing: border-box; border-radius: 20px; color:black; display: inline-block; min-width: 54px;
+                                text-align:center; white-space: nowrap; width:auto; font-family:var(--title-font);" name="테마">
+                                    <span style="font: var(--_aSnbXFtw); ">테마</span>
+                                    <span style="margin-left: var(--spacing-01); margin: 0; padding: 0;">
+                                        <svg viewBox="0 0 24 24" width="20px" height="20px" style="fill: currentColor; vertical-align: bottom; display: 
+                                        inline-block; margin: 0; padding: 0; overflow: hidden;">
+                                        </svg>
+                                    <option value="none">=== 선택 ===</option>
+                                    <option value="멋있는"selected>멋있는</option>
+                                    <option value="즐거운">즐거운</option>
+                                    <option value="맛있는">맛있는</option>
+                                    <option value="독특한">독특한</option>
+                                    <option value="쾌적한">쾌적한</option>
+                                    <option value="편안한">편안한</option>
+                                    <option value="친절한">친절한</option>
+                                    <option value="신비로운">신비로운</option>
+                                <input href="#" class = "button", type="submit" , value='Search' >
+                            </form>
+
+                    </div>
+
+
+                </div>
+            </section>  
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <h2 class="section__title about__title">선택된 테마의 여행지에서 <br> 가장 추천하는 10가지 장소를 보여줍니다</h2>
+                        <p class="about__description"> 1. 마음에 드는 단어를 고르고 Search를 클릭해주세요 <br> 
+                            2. 제공된 여행지 중 마음에 드는 장소를 골라주세요 <br>
+                            3. 여행지의 정보가 한 눈에 확인이 가능합니다
+                        </p>
+                    </div>
+
+                    <div class="about__img">
+                        <div class="about__img-overlay">
+                            <img src="static/img/about1.jpg" alt="" class="about__img-one">
+                        </div>
+
+                        <div class="about__img-overlay">
+                            <img src="static/img/about2.jpg" alt="" class="about__img-two">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== DISCOVER ====================-->
+            <section class="discover section" id="discover">
+              <h2 class="section__title">가장 인기있는 <br> 관광명소</h2>
+              <div class="discover__container container swiper-container">
+                <div class="swiper-wrapper">
+                  <!--==================== DISCOVER 1 ====================-->
+                  <div class="discover__card swiper-slide">
+                    <img src="static/img/discover1.jpg" alt="" class="discover__img">
+                    <div class="discover__data">
+                      <h2 class="discover__title">정물오름</h2>
+                      <span class="discover__description">테마 : <b>'멋있는'</b></span>
+                    </div>
+                  </div>
+                  <!--==================== DISCOVER 2 ====================-->
+                  <div class="discover__card swiper-slide">
+                    <img src="static/img/discover2.jpg" alt="" class="discover__img">
+                    <div class="discover__data">
+                      <h2 class="discover__title">제주 난타</h2>
+                      <span class="discover__description">테마 : <b>'즐거운'</b></span>
+                    </div>
+                  </div>
+                  <!--==================== DISCOVER 3 ====================-->
+                  <div class="discover__card swiper-slide">
+                    <img src="static/img/discover4.jpg" alt="" class="discover__img">
+                    <div class="discover__data">
+                      <h2 class="discover__title">협재굴</h2>
+                      <span class="discover__description">테마 : <b>'독특한'</b></span>
+                    </div>
+                  </div>
+                  <!--==================== DISCOVER 4 ====================-->
+                  <div class="discover__card swiper-slide">
+                    <img src="static/img/discover3.jpg" alt="" class="discover__img">
+                    <div class="discover__data">
+                      <h2 class="discover__title">오설록</h2>
+                      <span class="discover__description">테마 : <b>'맛있는'</b></span>
+                    </div>
+                  </div>
+                  <!--==================== DISCOVER 5 ====================-->
+                  <div class="discover__card swiper-slide">
+                    <img src="static/img/discover5.jpg" alt="" class="discover__img">
+                    <div class="discover__data">
+                      <h2 class="discover__title">수월봉</h2>
+                      <span class="discover__description">테마 : <b>'신비로운'</b></span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </section>
+            
+        <!--=============== FOOTER ===============-->
+        <footer class="footer section">
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line scrollup__icon"></i>
+        </a>
+        <!--=============== SCROLL REVEAL ===========-->
+        <script src="static/js/scrollreveal.min.js"></script>
+        <!--=============== SWIPER JS ===============-->
+        <script src="static/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="static/js/main.js"></script>
+    </body>
+</html>
